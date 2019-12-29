@@ -29,6 +29,7 @@
 කරන්නී NNCFN
 ගමට NNC
 ගියෙමි VFM
+ගියාය VFM
 වැඩේ NNC
 හරි NNC
 ගොවියා NNCMN
