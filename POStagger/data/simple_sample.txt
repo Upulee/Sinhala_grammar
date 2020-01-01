@@ -1,10 +1,12 @@
-﻿﻿මම PRP
+මම PRP
 ඔහු PRP
 අද PRP
 මට PRP
 යෙදවිය VP
 ය RP
 වූවා VP
+මම PRP
+ඔහු PRP
 සිදු RRPCV
 කරනවා VNF
 ගෙනෙනවා VNF
