@@ -457,7 +457,6 @@ subject,honorific,tense,person,gender,animate,number,verb_root,is_correct
 3rd_pserson,n,වර්තමාන,ප්‍රථම,නපුංසක,අප්‍රාණවාචි,ඒක,එහු,0
 3rd_pserson,n,වර්තමාන,ප්‍රථම,නපුංසක,අප්‍රාණවාචි,ඒක,ඒය,0
 3rd_pserson,n,වර්තමාන,ප්‍රථම,නපුංසක,අප්‍රාණවාචි,ඒක,ඕය,0
-subject,honorific,tense,person,gender,animate,number,verb_root,is_correct
 අපි,n,වර්තමාන,උත්තම,නොමැත,ප්‍රාණවාචි,බහු,අති,0
 අපි,n,අනාගත,උත්තම,නොමැත,ප්‍රාණවාචි,බහු,අන්නෙමු,1
 අපි,n,වර්තමාන,උත්තම,නොමැත,ප්‍රාණවාචි,බහු,අමි,0
