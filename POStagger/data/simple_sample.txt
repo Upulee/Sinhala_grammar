@@ -1,8 +1,6 @@
 ﻿﻿මම PRP
 මෙහි PRP
 නොමැත NIP
-﻿මම PRP
-මෙහි PRP
 සමහර DET
 හා CC
 සහ CC
@@ -15,6 +13,12 @@
 මෙම DET
 ප්‍රහාර NNC
 මිසයිල NNJ
+﻿මම PRP
+මෙහි PRP
+නොමැත NIP
+සමහර DET
+හා CC
+සහ CC
 ඊශ්‍රායල් NNP
 දෙකකින් NNC
 පලස්තීනුවන් NNP
