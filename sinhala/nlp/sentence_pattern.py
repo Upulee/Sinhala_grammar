@@ -17,6 +17,7 @@ def getSentencePattern(tagged_array):
       return ['3',[0,2],-1]
     elif tagged_array[1] == 'PRP': ##මම එය නැරඹුවෙමි && මම එය ඊයේ යැව්වෙමි && අපි ඔවුන්ට පහරදෙමු && අපි ඔවුන්ට ආරාධනා කළෙමු
       return ['3',[0],-1] 
-    else: return ['1',[0],-1]  #ඔබ ලීවෙමි && මම කතා කළෙමි
+    else: 
+        return ['1',[0],-1]  #ඔබ ලීවෙමි && මම කතා කළෙමි
 
     #elif ta

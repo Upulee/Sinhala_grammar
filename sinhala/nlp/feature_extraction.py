@@ -1,3 +1,9 @@
+import polyglot
+from polyglot.text import Text,Word
+import re
+
+from sinhala.nlp.POStagger.postagger import *
+
 ## check singularr or plural
 ############################
 ############################
@@ -34,9 +40,6 @@ def getPerson(r):
       return 'Subject ->',li,'Person ->',person_2
    
   return 'Subject ->',r,'Person ->',person_3
-
-     
-#getPerson("පියා")
 
 
 ### get the verb root
@@ -113,10 +116,6 @@ def get_verbroot(w):
     else:
       return 'අහු'
 
-  #return w[-3] 
-x = get_verbroot("දුන්නාය")
-x
-
 ### get gender
 def getGender(w):
   postag = re.sub(r'[^a-zA-Z]', "", POStagged(w))
@@ -135,9 +134,7 @@ def getGender(w):
   elif g == "N":
     return "නපුංසක"
   
-  #return postag
 
-getGender("කුඹුර")
 
 ### get animate of the given word
 #################################
@@ -156,7 +153,6 @@ def getAnimate(w):
   elif a == 'A':
     return "ප්‍රාණවාචි"
 
-print(getAnimate("අපි"))
 
 #### check whether the subject is horific or not
 ##################################################
@@ -181,4 +177,3 @@ def isHonorific(w):
     return 'n'
   return 'n'
   
-print(isHonorific("මෑනියන්දෑ"))

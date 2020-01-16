@@ -1,15 +1,19 @@
 import pandas as pd
 import numpy as np
-from sklearn import tree
+
 from sklearn.model_selection import train_test_split
-from sklearn.model_selection import KFold
+
 from sklearn.preprocessing import LabelEncoder
 from sklearn import model_selection
+from sklearn.model_selection import KFold
+
+from sklearn import tree
+
 import matplotlib.pyplot as plt
 from sklearn.metrics import plot_confusion_matrix
-import polyglot
-from polyglot.text import Text,Word
-import re
+
+from sinhala.nlp.feature_extraction import *
+from sinhala.nlp.sentence_pattern import *
 
 #for google drive file upload
 file = 'https://raw.githubusercontent.com/Upulee/Sinhala_grammar/master/dataset/Sinhala_grammar%20-%20Sinhala_grammar.csv'
@@ -17,12 +21,8 @@ df = pd.read_csv(file)
 
 df = df.dropna(how='all', axis='columns')
 
-df.head()
-
 inputs = df.drop('is_correct',axis='columns')
 target = df['is_correct']
-
-inputs[:5]
 
 subject = LabelEncoder()
 tense = LabelEncoder()
@@ -73,11 +73,7 @@ for title, normalize in titles_options:
     print(title)
     print(disp.confusion_matrix)
 
-plt.show()
-
-from POStagger import *
-from sinhala.nlp.feature_extraction import *
-
+##plt.show()
 
 ### 
 def checkGrammar(sentence):
@@ -115,9 +111,4 @@ def checkGrammar(sentence):
   for t in tense:
     print(t,s_p[3],'->',model.predict([[s_e[0],t,p_e[0],g_e[0],a_e[0],n_e[0],v_e[0],h_e[0]]])[0])
 
-
-
-  return 'high five' 
-
-getSentencePattern(posstaggedSentence("ඇය මා සමඟ තරඟ කරයි"))
 

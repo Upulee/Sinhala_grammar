@@ -1,3 +1,7 @@
+import pandas as pd
+import numpy as np
+import re
+
 poss_tag_list = pd.read_csv("https://raw.githubusercontent.com/Upulee/Sinhala_grammar/master/POStagger/data/simple_sample.txt")
 
 #morphological analyzer
@@ -49,10 +53,6 @@ def POStagged(searchstring):
         
         return y[0]
     return "Not Found"
-
-#separating white spaces from words and returning words only in an array
-
-print(POStagged("සීයා"))
 
 import string
 
