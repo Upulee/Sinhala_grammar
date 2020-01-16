@@ -1,0 +1,10 @@
+pip install -U scikit-learn
+!pip install polyglot
+
+!pip install PyICU
+
+!pip install pycld2
+
+!pip install morfessor
+
+!polyglot download morph2.si
