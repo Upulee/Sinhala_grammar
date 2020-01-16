@@ -1,13 +1,87 @@
-මම PRP
+﻿﻿මම PRP
+මෙහි PRP
+නොමැත NIP
+සමහර DET
+හා CC
+සහ CC
+ත් RP
+වූ VP
+එල්ල NCV
+පෙරේදා NNC
+තීරයට NNP
+ගාසා NNP
+මෙම DET
+ප්‍රහාර NNC
+මිසයිල NNJ
+ඊශ්‍රායල් NNP
+දෙකකින් NNC
+පලස්තීනුවන් NNP
+සිව්දෙනෙක් NUM
+ඝාතනය NCV
+වූහ VFM
+ඇමරිකානු NNP
+වී VNF
+සිදු RRPCV
+කරන VP
+ලද්දකි NVB
+පසු POST
+සටන් NNC
+ඇවිලිණ VFM
+බිමට NNC
+සමතලා JCV
+කළහ VFM
+නිරත RRPCV
+හමු RRPCV
+නොවීය VFM
+ඇත්තේ NIP
+සරණාගත JJ
+කඳවුරකටය NVB
+ඉකුත් JJ
+ඉරිදා NNP
+මරා VNF
+ගෙන VNF
+මැරෙන VP
+බෝම්බ NNJ
+ප්‍රහාරයකින් NNC
+ජාතිකයෙක් NNC
+ට CM
+වෙලාව NNC
+ක් RP
+පොත NNC
+කියවමි VFM
+කිසිදා DET
+දුම් NNJ
+පානය NNC
+ලීවෙමි VFM
+ලියමි VFM
+ලියන්නෙමි VFM
+අපි PRP
+ලීවෙමු VFM
+ලියමු VFM
+ලියන්නෙමු VFM
+ලීවේය VFM
+ලියයි VFM
+ලියන්නේය VFM
+කතා RRPCV
+කරමි VFM
+කරන්නෙමි VFM
+කරයි VFM
+කරන්නේය VFM
+කළෙමු VFM
+කරමු VFM
+කරන්නෙමු VFM
+කරන්නෙහි VFM
+ඔබ PRP
+ඔවුහු  PRP
+කළෙමි VFM
+කරති VFM
+කරන්නෙහු VFM
 ඔහු PRP
 අද PRP
 මට PRP
 යෙදවිය VP
 ය RP
 වූවා VP
-මම PRP
-ඔහු PRP
-අපි PRP
 සිදු RRPCV
 කරනවා VNF
 ගෙනෙනවා VNF
@@ -50,6 +124,7 @@
 දුවති VFM
 අම්මා NNC‍FN
 සමග POST
+සමඟ POST
 පන්සල් NNC
 ගියෙමු VFM
 කොවුලා NNCNN
@@ -110,6 +185,102 @@
 ආචාරශීලීව JJ
 පිළිවදන් NNC
 දුන්නා VP
+එය PRP
+නැරඹුවෙමි VFM
+තේරුම්ගනිමු VFM
+ගනිති VFM
+හුස්ම NNC
+ඇයව PRP
+මඟහැරියෝය VFM
+යැව්වෙමි VFM
+ඊයේ NNC
+කළෝය VFM
+දිගටම NNC
+කියවීම VNN
+සැමවිටම NNC
+යාච්ඤා NNC
+සෑදුවෙමු VFM
+වන්නෝය VFM
+ගුවන්ගත VP
+හෙට RB
+ඔහුව NNC
+පුදුම NNC
+නිමා RRPCV
+කරගත්තාය VFM
+අහිමි JCV
+කළාය VFM
+විසි VNF
+එයට PRP
+දෙයි VFM
+ඉඩ NNC
+කළෝය VFM
+පිළියෙළ RRPCV
+ගියේය VFM
+පළා VNF
+එයින් PRP
+ගත්තේය VFM
+මිලට NNC
+ඒ  PRP
+පිළිබඳ POST
+පැමිණිලි NCV
+විස්තර NNC
+ඔවුන්ට PRP
+පහරදෙමු VFM
+තෝරයි VFM
+ඔහුව PRP
+ආරාධනා NNC
+මා PRP
+අමතක NNC
+ස්තූති NNC
+ඔහුට PRP
+දුන්නෝය VFM
+උපදෙස් NNC
+තරඟ NNC
+බොරු NNC
+කීවෝය VFM
+ඇයට PRP
+හැඟෙයි VFM
+ඔහුගේ PRP
+බෑවේය VFM
+රැවුල NNC
+කතාබහ NNC
+කිරීම VNN
+ප්‍රතික්ෂේප NCV
+හැක AUX
+ඇසිය VP
+අපට PRP
+ලැබුණි VFM
+වැනි POST
+සතුටට NNC
+පත්විය VFM
+පත්වුහ VFM
+නො VP
+වංචා NNC
+සැණින් NNC
+අතුරුදහන් JCV
+විය VP
+වුහ VFM 
+ඇකිලින VFM
+සතුයි VP
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
 
 
 
