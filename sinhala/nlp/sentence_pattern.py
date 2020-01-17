@@ -21,3 +21,5 @@ def getSentencePattern(tagged_array):
         return ['1',[0],-1]  #ඔබ ලීවෙමි && මම කතා කළෙමි
 
     #elif ta
+
+    

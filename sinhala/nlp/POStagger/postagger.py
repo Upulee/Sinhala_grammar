@@ -1,8 +1,10 @@
 import pandas as pd
 import numpy as np
 import re
+import polyglot
+from polyglot.text import Text,Word
 
-poss_tag_list = pd.read_csv("data/simple_sample.txt")
+poss_tag_list = pd.read_csv("https://raw.githubusercontent.com/Upulee/Sinhala_grammar/master/sinhala/nlp/POStagger/data/simple_sample.txt")
 
 #morphological analyzer
 

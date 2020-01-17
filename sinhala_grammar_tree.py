@@ -70,8 +70,7 @@ for title, normalize in titles_options:
                                  normalize=normalize)
     disp.ax_.set_title(title)
 
-    print(title)
-    print(disp.confusion_matrix)
+    #print(disp.confusion_matrix)
 
 ##plt.show()
 
@@ -111,4 +110,4 @@ def checkGrammar(sentence):
   for t in tense:
     print(t,s_p[3],'->',model.predict([[s_e[0],t,p_e[0],g_e[0],a_e[0],n_e[0],v_e[0],h_e[0]]])[0])
 
-
+print(getSentencePattern(posstaggedSentence("ඇය මා සමඟ තරඟ කරයි")))
