@@ -12,14 +12,12 @@ def getSentencePattern(tagged_array):
     elif tagged_array[1] == 'PRP' and tagged_array[2] == 'DET' and tagged_array[3] == 'POST': ##ඇය මට ඒ පිළිබඳ විස්තර කළාය
       return ['7',[0],-1]
     elif tagged_array[1] == 'PRP' and tagged_array[2] == 'POST': ##ඇය මා සමඟ තරඟ කරයි
-      return ['8',[0,1],-1]
+      return ['8',[0],-1]
     elif tagged_array[1] == 'RP' and tagged_array[3] == 'RP':  ##මම ද ඔබ ද ගෙදර යමු
       return ['3',[0,2],-1]
     elif tagged_array[1] == 'PRP': ##මම එය නැරඹුවෙමි && මම එය ඊයේ යැව්වෙමි && අපි ඔවුන්ට පහරදෙමු && අපි ඔවුන්ට ආරාධනා කළෙමු
       return ['3',[0],-1] 
-    else: 
-        return ['1',[0],-1]  #ඔබ ලීවෙමි && මම කතා කළෙමි
+    else: return ['1',[0],-1]  #ඔබ ලීවෙමි && මම කතා කළෙමි
 
     #elif ta
-
-    
+  return 'high five'
