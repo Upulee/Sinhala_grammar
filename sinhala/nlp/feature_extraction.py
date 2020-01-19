@@ -176,4 +176,10 @@ def isHonorific(w):
   else:
     return 'n'
   return 'n'
-  
+
+######################## get active or passive
+def isActive(w):
+  if w == 'මාතා':
+    return 'n'
+  else:
+    return 'y'
