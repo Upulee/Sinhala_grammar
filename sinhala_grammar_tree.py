@@ -15,6 +15,8 @@ from sklearn.metrics import plot_confusion_matrix
 from sinhala.nlp.feature_extraction import *
 from sinhala.nlp.sentence_pattern import *
 
+from classifiers.knn import *
+
 #for google drive file upload
 file = 'https://raw.githubusercontent.com/Upulee/Sinhala_grammar/master/dataset/Sinhala_grammar%20-%20Sinhala_grammar.csv'
 df = pd.read_csv(file)
@@ -51,5 +53,8 @@ inputs['active_en'] = active.fit_transform(inputs['active'])
 encoded_inputs = inputs[['subject_en','tense_en','gender_en','animate_en','number_en','verb_root_en','person_en','honorific_en','active_en']]
 
 train_X, test_X, train_y, test_y = train_test_split(encoded_inputs, target, test_size=0.3, random_state=1)
+
+""" Data reshaping for KNN classifier """
+
 
 """" KNN classifier """
