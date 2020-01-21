@@ -105,7 +105,7 @@
 සඳහා POST
 කෙසේ RB
 ද? RP
-ඇය PRP
+ඇය NNCFN
 මෙසේ RB
 සතුට NNC
 විස්තර NNC
