@@ -19,7 +19,8 @@ from classifiers.knn import *
 
 from suggesion_knn import get_suggession
 
-from flask import Flask
+from flask import Flask, jsonify
+from flask import request
 
 #for google drive file upload
 file = 'https://raw.githubusercontent.com/Upulee/Sinhala_grammar/master/dataset/Grammar_rules.csv'
@@ -120,13 +121,7 @@ def checkGrammarknn(sentence):
     else: 
       return [False,[s_singular,s_p[3],s_g,s_a,s_h,s_active,s],w]
 
-def grammar():
-  grammar_result = checkGrammarknn("මම ගෙදර ගියෙමු")
-  if grammar_result[0] == False:
-    #print(grammar_result[2][-1])
-    print(get_suggession(grammar_result[1],grammar_result[2]))
-  else:
-    print("correct")
+
 
 ### create rest api
 app = Flask(__name__)
@@ -134,6 +129,25 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return "Hello, World!"
+
+@app.route('/api/v1.0/suggesions', methods=['POST'])
+def grammar():
+  if not request.json or not 'sentence' in request.json:
+    abort(400)
+    
+  #print(request.json['sentence'])
+  
+  grammar_result = checkGrammarknn(request.json['sentence'])
+  if grammar_result[0] == False:
+    #print(grammar_result[2][-1])
+    #print(get_suggession(grammar_result[1],grammar_result[2]))
+    return jsonify({
+      "status":"incorrect",
+      "suggesions": get_suggession(grammar_result[1],grammar_result[2])}
+      ), 201
+  else:
+    return jsonify({"status":"correct"}) , 201
+
 
 if __name__ == '__main__':
     app.run(debug=True)
