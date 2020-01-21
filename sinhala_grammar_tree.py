@@ -120,9 +120,20 @@ def checkGrammarknn(sentence):
     else: 
       return [False,[s_singular,s_p[3],s_g,s_a,s_h,s_active,s],w]
 
-grammar_result = checkGrammarknn("මම ගෙදර ගියෙමු")
-if grammar_result[0] == False:
-  #print(grammar_result[2][-1])
-  print(get_suggession(grammar_result[1],grammar_result[2]))
-else:
-  print("correct")
+def grammar():
+  grammar_result = checkGrammarknn("මම ගෙදර ගියෙමු")
+  if grammar_result[0] == False:
+    #print(grammar_result[2][-1])
+    print(get_suggession(grammar_result[1],grammar_result[2]))
+  else:
+    print("correct")
+
+### create rest api
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return "Hello, World!"
+
+if __name__ == '__main__':
+    app.run(debug=True)
