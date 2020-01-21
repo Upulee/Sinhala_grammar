@@ -17,6 +17,8 @@ from sinhala.nlp.sentence_pattern import *
 
 from classifiers.knn import *
 
+from suggesion_knn import get_suggession
+
 #for google drive file upload
 file = 'https://raw.githubusercontent.com/Upulee/Sinhala_grammar/master/dataset/Grammar_rules.csv'
 df = pd.read_csv(file)
@@ -112,7 +114,13 @@ def checkGrammarknn(sentence):
     #print([s,t,s_g,s_a,s_singular,v_r,s_p[3],s_h],[s_e[0],t,g_e[0],a_e[0],n_e[0],v_e[0],p_e[0],h_e[0],active_e[0]],recommendation_indices,target[recommendation_indices[0][1]])
     #print(t, '->',target[recommendation_indices[0][1]])
     if target[recommendation_indices[0][1]] == 1:
-      return True
-    else: return False
+      return [True]
+    else: 
+      return [False,[s_singular,s_p[3],s_g,s_a,s_h,s_active,s],w]
 
-print(checkGrammarknn("මම දෙදර ගියේය"))
+grammar_result = checkGrammarknn("මම ගෙදර ගියෙමු")
+if grammar_result[0] == False:
+  #print(grammar_result[2][-1])
+  print(get_suggession(grammar_result[1],grammar_result[2]))
+else:
+  print("correct")
