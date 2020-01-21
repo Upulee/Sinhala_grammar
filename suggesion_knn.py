@@ -29,7 +29,7 @@ inputs1['honorific_en'] = honorific1.fit_transform(inputs1['honorific'])
 inputs1['active_en'] = active1.fit_transform(inputs1['active'])
 inputs1['tense_en'] = tense1.fit_transform(inputs1['tense'])
 
-encoded_inputs1 = inputs1.drop(['subject','tense','gender','animate','number','person','active','honorific'],axis='columns')
+encoded_inputs1 = inputs1[['subject_en','tense_en','gender_en','animate_en','number_en','person_en','active_en','honorific_en','pattern']]
 
 knn_x1 = encoded_inputs1
 cat_recommendation_data1 = []
@@ -55,7 +55,8 @@ def get_suggession(vector, sentence): ##, sentence, verb_suffix
         person1.transform([vector[1]])[0],
         honorific1.transform([vector[4]])[0],
         active1.transform([vector[5]])[0],
-        0
+        0,
+        vector[6]
     ]
     
     #verb_root1.transform([vector[21]])
@@ -113,11 +114,12 @@ def create_verb(suffix,root):
 
 ### get the verb root
 #########################
+### get the verb root
+#########################
 def get_verbsuffix(w): # w: verb
   #return w[-5:-3] 
   ## uththma purusha
   feature = []
-  
 
   if w[-2:] == 'මි':
     if w[-3] == 'ෙ':
@@ -157,13 +159,15 @@ def get_verbsuffix(w): # w: verb
       feature = ['අති',w[:-2]]
   elif w[-1] == 'ය':
     if len(w) > 5:
-      if w[-5:] == 'න්නේය':
+      #return w[-5:]
+      if w[-5:] == "න්නේය":
         feature = ['අන්නේය',w[:-5]]
       elif w[-5:] == 'න්නෝය':
         feature = ['අන්නෝය',w[:-5]]
       elif w[-5:] == 'න්නාය':
         feature = ['අන්නාය',w[:-5]]
-    if w[-2] == 'ා':
+      else: return w
+    elif w[-2] == 'ා':
       feature = ['ආය',w[:-2]]
     elif w[-2] == 'ී':
       feature = ['ඊය',w[:-2]]

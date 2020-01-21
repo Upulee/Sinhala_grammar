@@ -8,7 +8,7 @@ from sinhala.nlp.POStagger.postagger import *
 ############################
 ############################
 def isSingular(w):
-  plural_suffixes = ["න්",'ෝ','කරුවන්','වරුන්']
+  plural_suffixes = ["න්",'ෝ','කරුවන්','වරුන්','හු']
   w = Word(w,language="si")
 
   for suffix in plural_suffixes:
