@@ -82,7 +82,7 @@ def get_suggession(vector, sentence): ##, sentence, verb_suffix
                 s = sentence
                 s[-1] = suggested_verb
 
-                s_array = [t," ".join(s),suggested_root]
+                s_array = [t,u" ".join(s),suggested_root]
 
                 suggestions.append(s_array)
 
