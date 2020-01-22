@@ -104,6 +104,8 @@ def checkGrammarknn(sentence):
   p_e = person.transform([s_p[3]])
   h_e = honorific.transform([s_h])
   active_e = active.transform([s_active])
+  pattern_id = int(sentence_pattern[0])
+  #print("pt",pattern_id)
 
   tense = [0,1,2] # athith, anagatha , warthamana
 
@@ -111,15 +113,15 @@ def checkGrammarknn(sentence):
 
   for t in tense:
     recommendation_indices, _ = knn(
-      cat_recommendation_data, [s_e[0],t,g_e[0],a_e[0],n_e[0],v_e[0],p_e[0],h_e[0],active_e[0],sentence_pattern[1]], k=k_recommendations,
+      cat_recommendation_data, [s_e[0],t,g_e[0],a_e[0],n_e[0],v_e[0],p_e[0],h_e[0],active_e[0],pattern_id], k=k_recommendations,
       distance_fn=euclidean_distance, choice_fn=lambda x: None
       )
-    #print([s,t,s_g,s_a,s_singular,v_r,s_p[3],s_h],[s_e[0],t,g_e[0],a_e[0],n_e[0],v_e[0],p_e[0],h_e[0],active_e[0]],recommendation_indices,target[recommendation_indices[0][1]])
     #print(t, '->',target[recommendation_indices[0][1]])
+    #print([s,t,s_g,s_a,s_singular,v_r,s_p[3],s_h],[s_e[0],t,g_e[0],a_e[0],n_e[0],v_e[0],p_e[0],h_e[0],active_e[0],pattern_id],cat_recommendation_data[recommendation_indices[1][1]])
     if target[recommendation_indices[0][1]] == 1:
       return [True,s_singular]
     
-  return [False,[s_singular,s_p[3],s_g,s_a,s_h,s_active,s,sentence_pattern[1]],w]
+  return [False,[s_singular,s_p[3],s_g,s_a,s_h,s_active,s,pattern_id],w]
 
 
 
