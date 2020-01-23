@@ -4,7 +4,7 @@ from sklearn.preprocessing import LabelEncoder
 from classifiers.knn import *
 
 #for google drive file upload
-df1 = pd.read_csv ("https://raw.githubusercontent.com/Upulee/Sinhala_grammar/master/dataset/Correct_grammar.csv")
+df1 = pd.read_csv ("https://raw.githubusercontent.com/Upulee/Sinhala_grammar/master/dataset/Correct_grammar2.csv")
 
 df1 = df1.dropna(how='all', axis='columns')
 
@@ -40,7 +40,8 @@ for row in knn_x1.values:
 k_recommendations1 = 3
 
 def get_suggession(vector, sentence): ##, sentence, verb_suffix
-    tenseslist = [2,1,0] ## present, future, past
+    tenseslist = [2,1,0] ## 
+    tl = ['present', 'future', 'past']
 
     if vector[1] == 'ප්‍රථම':
         s_e = subject1.transform(['3rd_person'])
